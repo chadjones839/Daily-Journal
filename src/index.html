@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chad's Journal</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <h1>Daily Journal</h1>
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="label">
+                    <label for="date">Date:</label>
+                </div>
+                <div class="field">
+                    <input type="date" name="journalDate" id="journalDate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="concepts">Concepts Covered:</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="conceptsCovered" placeholder="Write Here..." id="conceptsCovered">
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="journalEntry">Journal Entry:</label>
+                </div>
+                <div class="field">
+                    <textarea id="conceptsCovered" name="conceptsCovered" placeholder="Write Here..."></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="todaysMood">Mood:</label>
+                </div>
+                <div class="field">
+                    <select id="mood" name="mood">
+                        <option value="pumped">Pumped!</option>
+                        <option value="iGotThis">I Got This</option>
+                        <option value="accomplished">Accomplished</option>
+                        <option value="stillHope">There's Still Hope</option>
+                        <option value="annoyed">Annoyed</option>
+                        <option value="stuck">Stuck</option>
+                        <option value="cryingRoom">Find Me in the Crying Room</option>
+                </select>
+                </div>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form> 
+    </div>
+    <h1>Entry Log</h1>
+    <article class="entryLog">
+
+    </article>
+
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
+
