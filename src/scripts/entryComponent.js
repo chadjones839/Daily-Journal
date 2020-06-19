@@ -1,7 +1,7 @@
 // convert entries into single object
 
 const entryConverter = (entryObject) => {
-    const entryHTML = `<section class="entry">
+    const entryHTML = `<section class="entry__${entryObject.id}">
     <h4 class="entry__date">${entryObject.date}</h4>
     <h2 class="entry__concept">${entryObject.concept}</h2>
     <h3 class="entry__mood">${entryObject.mood}</h3>
@@ -9,6 +9,7 @@ const entryConverter = (entryObject) => {
     ${entryObject.entry}
     </p>
 </section>`
+
 return entryHTML
 }
 

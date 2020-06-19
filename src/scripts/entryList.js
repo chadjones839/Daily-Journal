@@ -1,5 +1,4 @@
-import API from "./data.js"
-import entryConverter from "./entryComponent"
+import entryConverter from "./entryComponent.js"
 
 const renderEntries = (entries) => {
     for(const entry of entries) {

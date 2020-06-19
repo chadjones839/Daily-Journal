@@ -1,10 +1,19 @@
 const url = "http://localhost:8088"
 
 const API = {
-    // Fetch from the API
-    getJournalEntries () {
+    getJournalEntries: () => {
         return fetch(`${url}/entryLog`)
-        .then (response => response.json());
+        .then(response => response.json());
+    },
+    saveJournalEntry: (newEntryObject) => {
+        return fetch(`${url}/entryLog`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newEntryObject)
+
+         }).then(response => response.json());
     }
 }
 

@@ -18,22 +18,7 @@
                     <input type="date" name="journalDate" id="journalDate">
                 </div>
             </div>
-            <div class="row">
-                <div class="label">
-                    <label for="concepts">Concepts Covered:</label>
-                </div>
-                <div class="field">
-                    <input type="text" name="conceptsCovered" placeholder="Write Here..." id="conceptsCovered">
-                </div>
-            </div>
-            <div class="row">
-                <div class="label">
-                    <label for="journalEntry">Journal Entry:</label>
-                </div>
-                <div class="field">
-                    <textarea id="conceptsCovered" name="conceptsCovered" placeholder="Write Here..."></textarea>
-                </div>
-            </div>
+
             <div class="row">
                 <div class="label">
                     <label for="todaysMood">Mood:</label>
@@ -47,12 +32,30 @@
                         <option value="annoyed">Annoyed</option>
                         <option value="stuck">Stuck</option>
                         <option value="cryingRoom">Find Me in the Crying Room</option>
-                </select>
+                    </select>
                 </div>
             </div>
-            <div class="submit">
-                <input type="submit" value="Submit">
+
+            <div class="row">
+                <div class="label">
+                    <label for="concepts">Concepts Covered:</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="conceptsCovered" placeholder="Write Here..." id="conceptsCovered">
+                </div>
             </div>
+
+            <div class="row">
+                <div class="label">
+                    <label for="journalEntry">Journal Entry:</label>
+                </div>
+                <div class="field">
+                    <textarea id="conceptsCovered" name="conceptsCovered" placeholder="Write Here..."></textarea>
+                </div>
+            </div>
+            
+            <div class="submit">
+                <button type="button">Save Entry</button>
         </form> 
     </div>
     <h1>Entry Log</h1>

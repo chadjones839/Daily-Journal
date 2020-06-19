@@ -6,6 +6,8 @@
     flex-direction: column;
     width: 80%;
     margin: auto;
+    background-color: lightgray;
+    margin-bottom: 10px;
 }
 
 .entry__date {
