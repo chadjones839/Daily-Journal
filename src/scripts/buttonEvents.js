@@ -1,7 +1,6 @@
-
 import API from "./data.js"
-import entryConverter from "./entryComponent.js"
-
+import updateFormFields from "./update.js"
+import getData from "./getData.js"
 
 const entryLog = document.querySelector("#entryLog")
 
@@ -14,8 +13,21 @@ export default {
 
                 // Invoke the delete method, then get all recipes and render them
                 API.deleteJournalEntry(entryToDelete)
-                    .then(API.getJournalEntries)
-                    window.location.reload()
+                    // .then(API.getJournalEntries)
+                .then(() => {
+                    document.querySelector("#entryLog").innerHTML = ""
+                    getData()
+                })
+                    
+                    // window.location.reload()
+            }
+        })
+    },
+    registerEditListener() {
+        entryLog.addEventListener("click", event => {
+            if (event.target.id.startsWith("editEntry__")) {
+                const entryIdToEdit = event.target.id.split("__")[1]
+                updateFormFields(entryIdToEdit)
             }
         })
     }

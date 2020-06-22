@@ -3,8 +3,11 @@ import renderEntries from "./entryList.js"
 import todaysDate from "./todaysDate.js"
 import getData from "./getData.js"
 import events from "./buttonEvents.js"
-import { createEntry, saveEntryButton } from "./createEntry.js"
+import createEntry from "./createEntry.js"
+import saveButton from "./saveButton.js"
+import updateFormFields from "./update.js"
 
 getData()
-saveEntryButton()
+saveButton.saveEntry()
 events.registerDeleteListener()
+events.registerEditListener()

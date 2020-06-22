@@ -11,14 +11,20 @@ h1 {
 
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
     padding: 20px;
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: auto;
+    align-items: center;
 }
     
+form {
+    width: 80%;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
 
 input[type=text], textarea {
     width: 100%;
@@ -31,7 +37,7 @@ input[type=text], textarea {
 }
 
 textarea {
-    height: 200px;
+    height: 100px;
 }
 
 select, input[type=date] {
@@ -70,7 +76,7 @@ label[for="date"] {
 }
 
 input[type=submit]:hover {
-    background-color: #2363f7;
+    background-color: #497df5;
 }
 
 @media screen and (max-width: 1115px) {

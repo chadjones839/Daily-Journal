@@ -8,7 +8,7 @@ const entryConverter = (entryObject) => {
     ${entryObject.entry}
     </p>
     <div class="entryButtonContainer">
-        <button id="editButton" class="editButton" type="button">Edit</button>
+        <button id="editEntry__${entryObject.id}" class="editButton" type="button">Edit</button>
         <button id="deleteEntry__${entryObject.id}" class="deleteButton type="button">Delete</button>
     </div>
 </section>`
