@@ -6,13 +6,6 @@
       "entry": "Today we were taught how to parse API data into javascript.",
       "mood": "Crying Room",
       "id": 1
-    },
-    {
-      "date": "6/18/20",
-      "mood": 1,
-      "concept": 1,
-      "entry": "learned saving entries and factory functions",
-      "id": 2
     }
   ]
 }

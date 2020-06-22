@@ -30,3 +30,17 @@
     margin: 20px 0 10px 0;
     font-family: sans-serif;
 }
+
+.entryButtonContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.editButton {
+    width: 10%;
+}
+
+.deleteButton {
+    width: 10%;
+    margin-left: 20px;
+}
