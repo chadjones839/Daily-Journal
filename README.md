@@ -137,7 +137,7 @@
 
 #### Mood Radio Buttons
 
-- [ ] Using <fieldset>, <legend>, <input type="radio">, and <label> HTML components, construct a set of radio buttons for selecting one of the moods
+- [ ] Using `<fieldset>`, `<legend>`, `<input type="radio">`, and `<label>` HTML components, construct a set of radio buttons for selecting one of the moods
 
 - [ ] Use the `filter()` and `find()` method on an array to show journal entries that match a certain mood.
 
