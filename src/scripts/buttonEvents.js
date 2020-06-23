@@ -1,8 +1,11 @@
 import API from "./data.js"
 import updateFormFields from "./update.js"
 import getData from "./getData.js"
+import renderEntries from "./entryList.js"
+import filterEntries from "./radioButtons.js"
 
 const entryLog = document.querySelector("#entryLog")
+const radioButton = document.getElementsByName("pain")
 
 export default {
     registerDeleteListener () {
@@ -18,8 +21,6 @@ export default {
                     document.querySelector("#entryLog").innerHTML = ""
                     getData()
                 })
-                    
-                    // window.location.reload()
             }
         })
     },
@@ -29,6 +30,22 @@ export default {
                 const entryIdToEdit = event.target.id.split("__")[1]
                 updateFormFields(entryIdToEdit)
             }
+        })
+    },
+    registerRadioClick() {
+        radioButton.forEach(radio => {
+            radio.addEventListener("click", event => {
+                const mood = event.target.value
+                
+                API.getJournalEntries(mood)
+                // .then(() => {
+                //     document.querySelector("#entryLog").innerHTML = ""
+                //     getData() 
+                // })
+                console.log(mood)
+                return mood
+                
+            })
         })
     }
 }

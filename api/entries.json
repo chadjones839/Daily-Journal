@@ -1,11 +1,46 @@
 {
   "entryLog": [
     {
-      "date": "2020-06-22",
-      "mood": "pumped",
+      "date": "2020-06-23",
+      "mood": "No Pain",
       "concept": "Databases",
-      "entry": "Today we were taught how to parse API data into javascript and it was fun as hell",
+      "entry": "Today we were taught how to parse API data into javascript and it was fun",
       "id": 1
+    },
+    {
+      "date": "2020-06-23",
+      "mood": "Mild Pain",
+      "concept": "test",
+      "entry": "test",
+      "id": 2
+    },
+    {
+      "date": "2020-06-23",
+      "mood": "Moderate Pain",
+      "concept": "test 2",
+      "entry": "test 2",
+      "id": 3
+    },
+    {
+      "date": "2020-06-23",
+      "mood": "Severe Pain",
+      "concept": "test 3",
+      "entry": "test 3",
+      "id": 4
+    },
+    {
+      "date": "2020-06-23",
+      "mood": "Very Severe Pain",
+      "concept": "test 4",
+      "entry": "test 4",
+      "id": 5
+    },
+    {
+      "date": "2020-06-23",
+      "mood": "Worst Possible Pain",
+      "concept": "test 5",
+      "entry": "test 5",
+      "id": 6
     }
   ]
 }

@@ -21,7 +21,6 @@ const API = {
             document.querySelector("#conceptsCovered").value = ""
             document.querySelector("#entry").value = ""
             getData()
-            // window.location.reload()
         })
     },
     deleteJournalEntry: (id) => {
@@ -29,9 +28,6 @@ const API = {
             method: "DELETE"
         })
         .then (response => response.json())
-        
-            // window.location.reload()
-        
     },
     editJournalEntry: (id) => {
         const updatedObject = {
@@ -52,7 +48,6 @@ const API = {
         .then(() => {
             document.querySelector("#editEntryId").value = ""
             getData()
-            // window.location.reload()
         })
     }
 }

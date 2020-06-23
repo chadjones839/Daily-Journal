@@ -12,7 +12,7 @@
         <form action="">
             <input type="hidden" id="editEntryId" value="" />
             <div class="row">
-                <div class="label">
+                <div class="fieldLabel">
                     <label for="date">Date:</label>
                 </div>
                 <div class="field">
@@ -21,24 +21,24 @@
             </div>
 
             <div class="row">
-                <div class="label">
-                    <label for="todaysMood">Mood:</label>
+                <div class="fieldLabel">
+                    <label for="todaysMood">Pain Intensity:</label>
                 </div>
                 <div class="field">
                     <select id="mood" name="mood">
-                        <option value="pumped">Pumped!</option>
-                        <option value="iGotThis">I Got This</option>
-                        <option value="accomplished">Accomplished</option>
-                        <option value="stillHope">There's Still Hope</option>
-                        <option value="annoyed">Annoyed</option>
-                        <option value="stuck">Stuck</option>
-                        <option value="cryingRoom">Find Me in the Crying Room</option>
+                        <!-- <option value="Select" selected disabled>Pain Intensity...</option> -->
+                        <option value="No Pain">No Pain</option>
+                        <option value="Mild Pain">Mild Pain</option>
+                        <option value="Moderate Pain">Moderate Pain</option>
+                        <option value="Severe Pain">Severe Pain</option>
+                        <option value="Very Severe Pain">Very Severe Pain</option>
+                        <option value="Worst Possible Pain">Worst Possible Pain</option>
                     </select>
                 </div>
             </div>
 
             <div class="row">
-                <div class="label">
+                <div class="fieldLabel">
                     <label for="concepts">Concepts Covered:</label>
                 </div>
                 <div class="field">
@@ -47,7 +47,7 @@
             </div>
 
             <div class="row">
-                <div class="label">
+                <div class="fieldLabel">
                     <label for="journalEntry">Journal Entry:</label>
                 </div>
                 <div class="field">
@@ -57,7 +57,21 @@
             
             <div class="submit">
                 <button id="saveButton" type="button">Save Entry</button>
-        </form> 
+        </form>
+    </div>    
+    <div id="filterLegend">
+        <form action="">
+            <fieldset>
+                <legend>Filter Entries by Pain Intensity:</legend>
+                <label><input type="radio" name="pain" value="All Entries">All Entries</label>
+                <label><input type="radio" name="pain" value="No Pain">No Pain</label>
+                <label><input type="radio" name="pain" value="Mild Pain">Mild Pain</label>
+                <label><input type="radio" name="pain" value="Moderate Pain">Moderate Pain</label>
+                <label><input type="radio" name="pain" value="Severe Pain">Severe Pain</label>
+                <label><input type="radio" name="pain" value="Very Severe Pain">Very Severe Pain</label>
+                <label><input type="radio" name="pain" value="Worst Possible Pain">Worst Possible Pain</label>
+            </fieldset>
+          </form>
     </div>
     <div id="entryContainer">
         <h1 class="entryTitle">Entry Log</h1>
