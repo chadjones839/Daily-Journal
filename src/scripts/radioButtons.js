@@ -1,52 +1,47 @@
 import API from "./data.js"
 import getData from "./getData.js"
 import events from "./buttonEvents.js"
+import renderEntries from "./entryList.js"
 
-// const entries = document.querySelector("entryLog")
-const entries = API.getJournalEntries()
 
-const filterEntries = () => {
-    entries.filter(entry => {
-        let noPain = false
-        let mildPain = false
-        let moderatePain = false
-        let severePain = false
-        let verySeverePain = false
-        let worstPossiblePain = false
-        let allEntries = false
-    
-        if (entry.mood === "No Pain") {
-            noPain = true
-            events.registerRadioClick(noPain)
-            return noPain
-        }
-        else if (entry.mood === "Mild Pain") {
-            mildPain = true
-            return mildPain
-        }
-        else if (entry.mood === "Moderate Pain") {
-            moderatePain = true
-            return moderatePain
-        }
-        else if (entry.mood === "Severe Pain") {
-            severePain = true
-            return severePain
-        }
-        else if (entry.mood === "Very Severe Pain") {
-            verySeverePain = true
-            return verySeverePain
-        }
-        else if (entry.mood === "Worst Possible Pain") {
-            worstPossiblePain = true
-            return worstPossiblePain
-        }
-        else if (entry.mood !== "") {
-            allEntries = true
-            return allEntries
-        }
-    })
-}
+let entries = []
+
+API.getJournalEntries()
+.then ((allEntries) => entries = allEntries)
+
+const entryLog = document.querySelector("#entryLog")
+const radioButton = document.getElementsByName("pain")
+
+const filterEntries = {
+    registerRadioClick() {
+        radioButton.forEach(radio => {
+            radio.addEventListener("click", event => {
+                const mood = event.target.value
+                console.log('MOOD BUTTON = ', mood)
+                
+                let newMood = filterEntries.filterRadioClick(mood)
+                entryLog.innerHTML = ""
+                renderEntries(newMood)
+                
+                console.log('RETURNED', filteredEntries)
+                console.log('FILTERED ENTRIES:', newMood)               
+            })
+        })
+    },
+    filterRadioClick(val) {
+        console.log('MOOD OBJECT VALUE = ', val)
+        const all = entries.filter(entry => {
+            let filteredMoods = false
+            if (entry.mood === val) {
+                filteredMoods = true
+            }
+            console.log('FILTER SUCCESS', filteredMoods)
+            
+            return filteredMoods
+        })
+        return all
+    }
+}       
+        
 
 export default filterEntries
-
-

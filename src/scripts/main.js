@@ -7,9 +7,10 @@ import filterEntries from "./radioButtons.js"
 
 
 
+
 getData()
 saveButton.saveEntry()
 events.registerDeleteListener()
 events.registerEditListener()
-events.registerRadioClick()
-filterEntries()
+filterEntries.registerRadioClick()
+
