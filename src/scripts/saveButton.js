@@ -10,7 +10,6 @@ const saveButton = {
             console.log(hiddenEntryId)
             let entry = {}
 
-            
             entry.date = document.querySelector("#journalDate").value
             entry.mood = document.querySelector("#mood").value
             entry.concept = document.querySelector("#conceptsCovered").value
@@ -28,7 +27,6 @@ const saveButton = {
                 API.saveJournalEntry(entry)
                 console.log('new')
             }
-
             else {
                 alert("Fill out all fields")
             }      

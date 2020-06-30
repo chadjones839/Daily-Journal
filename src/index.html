@@ -26,7 +26,7 @@
                 </div>
                 <div class="field">
                     <select id="mood" name="mood">
-                        <!-- <option value="Select" selected disabled>Pain Intensity...</option> -->
+                        <option value="Select" class="default" selected disabled>Pain Level...</option>
                         <option value="No Pain">No Pain</option>
                         <option value="Mild Pain">Mild Pain</option>
                         <option value="Moderate Pain">Moderate Pain</option>
@@ -57,13 +57,13 @@
             
             <div class="submit">
                 <button id="saveButton" type="button">Save Entry</button>
+            </div>
         </form>
     </div>    
     <div id="filterLegend">
         <form action="">
             <fieldset>
                 <legend>Filter Entries by Pain Intensity:</legend>
-                <!-- <label><input type="radio" name="pain" value="All Entries">All Entries</label> -->
                 <label><input type="radio" name="pain" value="No Pain">No Pain</label>
                 <label><input type="radio" name="pain" value="Mild Pain">Mild Pain</label>
                 <label><input type="radio" name="pain" value="Moderate Pain">Moderate Pain</label>

@@ -1,6 +1,5 @@
 import API from "./data.js"
 import getData from "./getData.js"
-import events from "./buttonEvents.js"
 import renderEntries from "./entryList.js"
 
 
@@ -13,7 +12,7 @@ const entryLog = document.querySelector("#entryLog")
 const radioButton = document.getElementsByName("pain")
 
 const filterEntries = {
-    registerRadioClick() {
+    registerRadioClick() {    
         radioButton.forEach(radio => {
             radio.addEventListener("click", event => {
                 const mood = event.target.value
@@ -23,7 +22,6 @@ const filterEntries = {
                 entryLog.innerHTML = ""
                 renderEntries(newMood)
                 
-                console.log('RETURNED', filteredEntries)
                 console.log('FILTERED ENTRIES:', newMood)               
             })
         })
@@ -34,7 +32,7 @@ const filterEntries = {
             let filteredMoods = false
             if (entry.mood === val) {
                 filteredMoods = true
-            }
+            } 
             console.log('FILTER SUCCESS', filteredMoods)
             
             return filteredMoods
@@ -45,3 +43,4 @@ const filterEntries = {
         
 
 export default filterEntries
+// This is a comment

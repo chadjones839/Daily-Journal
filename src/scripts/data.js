@@ -2,8 +2,6 @@ import getData from "./getData.js";
 
 const url = "http://localhost:8088"
 
-
-
 const API = {
     getJournalEntries: () => {
         return fetch(`${url}/entryLog`)

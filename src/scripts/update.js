@@ -2,7 +2,6 @@ const url = "http://localhost:8088"
 
 const updateFormFields = (entryId) => {
 
-    // Get reference to input fields in the form
     const hiddenEntryId = document.querySelector("#editEntryId")
     const date = document.querySelector("#journalDate")
     const mood = document.querySelector("#mood")

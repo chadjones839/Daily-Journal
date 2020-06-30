@@ -1,4 +1,3 @@
-
 const entryConverter = (entryObject) => {
     const entryHTML = `<section class="entry" id="${entryObject.id}">
     <h4 class="entry__date">${entryObject.date}</h4>
@@ -15,7 +14,5 @@ const entryConverter = (entryObject) => {
 
 return entryHTML
 }
-
-
 
 export default entryConverter
